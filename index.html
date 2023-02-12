@@ -1,0 +1,52 @@
+<html>
+<head>
+    <script>
+      const Room = [
+        "Kitchen",
+        "Parlor",
+        "Family",
+        "Half Bath",
+        "Full Bath",
+        "Primary Bath",
+      ];
+      const Location = ["North", "South", "East", "West", "Central"];
+      const Material = ["Floor", "Wood", "Glass", "Metal", "Fiber"];
+      const Tool = ["Laundry Machine", "Vacuum", "Steam", "Swiffer", "Mop"];
+      const Time = [1, 2, 3, 5, 10, 15];
+      const Type = ["Tidy", "Polish", "Dust", "Wipe", "Wash"];
+      const Kitchen = ["Sink", "Stove", "Rack", "Counter", "Nook", "Station"];
+
+      const getRandomValue = (list) => {
+        return list[Math.floor(Math.random() * list.length)];
+      };
+
+      let randomRoom = getRandomValue(Room);
+      const randomLocation = getRandomValue(Location);
+      const randomMaterial = getRandomValue(Material);
+      const randomTool = getRandomValue(Tool);
+      const randomType = getRandomValue(Type);
+      const randomTime = getRandomValue(Time);
+      const randomKitchen = randomRoom === "Kitchen" ? getRandomValue(Kitchen) : "";
+
+      let result = `${randomRoom} - ${randomMaterial} - ${randomTool} - ${randomType}`;
+
+      if (randomRoom === "Kitchen") {
+        randomRoom = ` ${randomKitchen}`;
+        result = `Kitchen: ${randomKitchen} - ${randomMaterial} - ${randomTool} - ${randomType}`;
+
+      } 
+
+
+      
+
+      document.write(result);
+      document.getElementById("greeting").innerHTML = result;
+
+    </script>
+  </head>
+
+  <body>
+    <h1 id="greeting"></h1>
+  </body>
+
+</html>
