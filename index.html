@@ -28,11 +28,19 @@
       const randomTime = getRandomValue(Time);
       const randomKitchen = randomRoom === "Kitchen" ? getRandomValue(Kitchen) : "";
 
-      let result = `${randomRoom} - ${randomMaterial} - ${randomTool} - ${randomType}`;
+      let result = `
+      ${randomRoom}
+      ${randomMaterial}
+      ${randomTool}
+      ${randomType}`;
 
       if (randomRoom === "Kitchen") {
         randomRoom = ` ${randomKitchen}`;
-        result = `Kitchen: ${randomKitchen} - ${randomMaterial} - ${randomTool} - ${randomType}`;
+        result = `
+        Kitchen: ${randomKitchen}
+        ${randomMaterial}
+        ${randomTool}
+        ${randomType}`;
 
       } 
 
