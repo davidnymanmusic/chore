@@ -29,17 +29,17 @@
       const randomKitchen = randomRoom === "Kitchen" ? getRandomValue(Kitchen) : "";
 
       let result = `
-      ${randomRoom}
-      ${randomMaterial}
-      ${randomTool}
+      ${randomRoom}\n
+      ${randomMaterial}\n
+      ${randomTool}\n
       ${randomType}`;
 
       if (randomRoom === "Kitchen") {
         randomRoom = ` ${randomKitchen}`;
         result = `
-        Kitchen: ${randomKitchen}
-        ${randomMaterial}
-        ${randomTool}
+        Kitchen: ${randomKitchen}\n
+        ${randomMaterial}\n
+        ${randomTool}\n
         ${randomType}`;
 
       } 
