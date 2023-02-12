@@ -29,26 +29,30 @@
       const randomKitchen = randomRoom === "Kitchen" ? getRandomValue(Kitchen) : "";
 
       let result = `
-      ${randomRoom}\n
-      ${randomMaterial}\n
-      ${randomTool}\n
-      ${randomType}`;
+      ${randomRoom}!\n
+      ${randomMaterial}!\n
+      ${randomTool}!\n
+      ${randomType}!`;
 
       if (randomRoom === "Kitchen") {
         randomRoom = ` ${randomKitchen}`;
         result = `
-        Kitchen: ${randomKitchen}\n
-        ${randomMaterial}\n
-        ${randomTool}\n
-        ${randomType}`;
+        Kitchen: ${randomKitchen}!\n
+        ${randomMaterial}!\n
+        ${randomTool}!\n
+        ${randomType}!`;
 
       } 
 
 
-      
+      var elem = document.querySelector('#greeting');
+console.log(elem)
+// Get HTML content
+/* var html = elem.innerHTML;
+        elem.innerHTML += `<p>{result}</p>`; */
 
-      document.write(result);
-      document.getElementById("greeting").innerHTML = result;
+document.write(`<h1>${result}</h1>`);
+
 
     </script>
   </head>
