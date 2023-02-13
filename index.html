@@ -1,5 +1,17 @@
 <html>
 <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js">
+    const getUsers = () => {
+  axios
+    .get("https://reqres.in/api/users")
+    .then((response) => {
+      const users = response.data.data;
+      console.log(`GET users`, users);
+    })
+    .catch((error) => console.error(error));
+};
+getUsers();
+    </script>
     <script>
       const Room = [
         "Kitchen",
