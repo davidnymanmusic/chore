@@ -1,5 +1,19 @@
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap" rel="stylesheet">
+<style>
+*{
+  background-color: #fc8166;
+font-family: 'Eczar', serif;
+color: white;
+text-align: center;
+}
+body{
+  display: block;
+}
+</style>
     <script src="https://unpkg.com/axios/dist/axios.min.js">
     const getUsers = () => {
   axios
@@ -41,18 +55,24 @@ getUsers();
       const randomKitchen = randomRoom === "Kitchen" ? getRandomValue(Kitchen) : "";
 
       let result = `
-      ${randomRoom}!\n
-      ${randomMaterial}!\n
-      ${randomTool}!\n
-      ${randomType}!`;
+      ${randomRoom}\n
+      <br>
+      ${randomMaterial}\n
+          <br>
+      ${randomTool}\n
+          <br>
+      ${randomType}`;
 
       if (randomRoom === "Kitchen") {
         randomRoom = ` ${randomKitchen}`;
         result = `
-        Kitchen: ${randomKitchen}!\n
-        ${randomMaterial}!\n
-        ${randomTool}!\n
-        ${randomType}!`;
+        Kitchen: ${randomKitchen}\n
+            <br>
+        ${randomMaterial}\n
+            <br>
+        ${randomTool}\n
+            <br>
+        ${randomType}`;
 
       } 
 
