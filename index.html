@@ -1,32 +1,38 @@
 <html>
-<head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap" rel="stylesheet">
-<style>
-*{
-  background-color: #fc8166;
-font-family: 'Eczar', serif;
-color: white;
-text-align: center;
-  
-}
-body{
-  display: block;
-    margin: 10em;
-}
-</style>
+
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap" rel="stylesheet">
+    <style>
+      * {
+        background-color: #fc8166;
+        font-family: 'Eczar', serif;
+        color: white;
+        text-align: center;
+        font-size: 60px;
+
+      }
+
+      body {
+        display: center;
+        margin: 2.2em;
+
+      }
+
+    </style>
     <script src="https://unpkg.com/axios/dist/axios.min.js">
-    const getUsers = () => {
-  axios
-    .get("https://reqres.in/api/users")
-    .then((response) => {
-      const users = response.data.data;
-      console.log(`GET users`, users);
-    })
-    .catch((error) => console.error(error));
-};
-getUsers();
+      const getUsers = () => {
+        axios
+          .get("https://reqres.in/api/users")
+          .then((response) => {
+            const users = response.data.data;
+            console.log(`GET users`, users);
+          })
+          .catch((error) => console.error(error));
+      };
+      getUsers();
+
     </script>
     <script>
       const Room = [
@@ -76,17 +82,16 @@ getUsers();
             <br>
         ${randomType}`;
 
-      } 
+      }
 
 
       var elem = document.querySelector('#greeting');
-console.log(elem)
-// Get HTML content
-/* var html = elem.innerHTML;
-        elem.innerHTML += `<p>{result}</p>`; */
+      console.log(elem)
+      // Get HTML content
+      /* var html = elem.innerHTML;
+              elem.innerHTML += `<p>{result}</p>`; */
 
-document.write(`<h1>${result}</h1>`);
-
+      document.write(`<h1>${result}</h1>`);
 
     </script>
   </head>
